@@ -2,7 +2,6 @@
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector(".navbar");
   const scrollTop = document.querySelector(".scroll-top");
-
   if (window.scrollY > 100) {
     navbar.classList.add("scrolled");
     scrollTop.classList.add("visible");
@@ -22,7 +21,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         behavior: "smooth",
         block: "start",
       });
-      // Close mobile menu if open
       document.querySelector(".nav-links").classList.remove("active");
     }
   });
@@ -58,7 +56,7 @@ const observer = new IntersectionObserver(function (entries) {
 
 // Observe all cards
 document
-  .querySelectorAll(".card, .team-card, .pub-item, .client-card")
+  .querySelectorAll(".card, .team-card, .pub-item, .client-card, .app-card")
   .forEach((el) => {
     el.style.opacity = "0";
     el.style.transform = "translateY(30px)";
